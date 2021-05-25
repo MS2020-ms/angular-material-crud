@@ -1,0 +1,68 @@
+<div class="container">
+    <!-- toolbar -->
+    <mat-toolbar>
+        <span>Crear Usuario</span>
+    </mat-toolbar>
+
+    <!-- card -->
+    <mat-card class="card">
+        <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+
+            <mat-grid-list cols="4" rowHeight="4:1">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <!-- form field -->
+                    <mat-form-field class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="usuario">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="5">
+                    <img src="./assets/img/user.png" alt="user icon">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <!-- form field -->
+                    <mat-form-field class="ancho">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput autocomplete="off" formControlName="nombre">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <!-- form field -->
+                    <mat-form-field class="ancho">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput autocomplete="off" formControlName="apellido">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <!-- form field -->
+                    <mat-form-field class="ancho">
+                        <mat-label>Sexo</mat-label>
+                        <!-- select -->
+                        <mat-select formControlName="sexo">
+                            <mat-option *ngFor="let item of sexo" [value]="item.value">
+                                {{item.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <!-- button -->
+                    <button mat-flat-button class="margen">VOLVER</button>
+                    <button type="submit" [disabled]="!form.valid" mat-flat-button color="primary">ACEPTAR</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <!-- grid list -->
+            <!-- <mat-grid-list cols="4" rowHeight="4:1">
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.backgroud]="'lightblue'">1</mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="5" [style.backgroud]="'lightblue'">2</mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.backgroud]="'lightblue'">3</mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.backgroud]="'lightblue'">4</mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.backgroud]="'lightblue'">5</mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.backgroud]="'lightblue'">6 DE VOLVER Y ACEPTAR
+                </mat-grid-tile>
+            </mat-grid-list> -->
+        </form>
+    </mat-card>
+
+</div>

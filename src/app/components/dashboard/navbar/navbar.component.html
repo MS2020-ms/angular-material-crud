@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span>App-Users</span>
+    <!-- alinear y espaciar botones -->
+    <span class="example-spacer"></span>
+    <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button>
+
+    <!-- alinear y espaciar botones -->
+    <span class="example-spacer"></span>
+    <button mat-icon-button routerLink="/logout" class="example-icon favorite-icon"
+        aria-label="Example icon-button with logout icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

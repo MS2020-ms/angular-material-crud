@@ -1,0 +1,28 @@
+<div class="center">
+    <div class="login">
+
+        <!-- spinner solo se muestra cuando loading es true-->
+        <mat-spinner diameter="50" class="spinner" *ngIf="loading"></mat-spinner>
+
+        <!-- formulario solo se muestra cuando loading es false-->
+        <form [formGroup]="formulario" (ngSubmit)="ingresar()" *ngIf="!loading">
+            <!-- img ruta relativa -->
+            <!-- <img src="../../../assets/img/user.png" alt="user icon"> -->
+            <!-- img ruta absoluta -->
+            <img src="./assets/img/user.png" alt="user icon">
+            <h1>Login</h1>
+            <!-- class ancho es propia -->
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput type="text" autocomplete="off" formControlName="usuario">
+            </mat-form-field>
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" autocomplete="off" formControlName="password">
+            </mat-form-field>
+            <br>
+            <button mat-flat-button color="primary" type="submit" class="ancho btn-alto"
+                [disabled]="!formulario.valid">Ingresar</button>
+        </form>
+    </div>
+</div>
