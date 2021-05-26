@@ -54,7 +54,9 @@
                         <a class="pointer" style="color: #1878b0;" matTooltip="Ver Usuario">
                             <mat-icon>search</mat-icon>
                         </a>
-                        <a class="pointer" style="color: #1f516f;" matTooltip="Editar Usuario">
+                        <!-- Todo: routerLink como property bindig porque le voy a pasar datos (id) o con evento click| index para eliminar por indice de array o id-->
+                        <a class="pointer" style="color: #1f516f;" matTooltip="Editar Usuario"
+                            [routerLink]="['/dashboard/editar-usuario/', element.id]">
                             <mat-icon>edit</mat-icon>
                         </a>
                         <a class="pointer" (click)="eliminarUsuario(i)" style="color: #e15639;"

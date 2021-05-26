@@ -8,8 +8,6 @@ import { Usuario } from 'src/app/interfaces/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 
-
-
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',

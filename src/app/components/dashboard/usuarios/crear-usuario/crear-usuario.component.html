@@ -1,12 +1,12 @@
 <div class="container">
     <!-- toolbar -->
     <mat-toolbar>
-        <span>Crear Usuario</span>
+        <span>{{titulo}}</span>
     </mat-toolbar>
 
     <!-- card -->
     <mat-card class="card">
-        <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+        <form [formGroup]="form" (ngSubmit)="agregarEditarUsuario()">
 
             <mat-grid-list cols="4" rowHeight="4:1">
                 <mat-grid-tile [colspan]="1" [rowspan]="1">

@@ -13,6 +13,7 @@ const routes: Routes = [
       { path: 'usuarios', component: UsuariosComponent },
       { path: 'reportes', component: ReportesComponent },
       { path: 'crear-usuario', component: CrearUsuarioComponent },
+      { path: 'editar-usuario/:id', component: CrearUsuarioComponent },
 
     ]
   }

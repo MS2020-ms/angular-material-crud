@@ -176,3 +176,13 @@ Ir crear-usuario.html
 # Comunicacion = datos de componente al servicio
 Ir a usuario.service
 Ir a crear-usuario.ts
+
+# Editar usuario
+Instalar uuid para crear id a cada usuario:
+>npm install uuid
+Crear id en usuarios.service.ts y en form de crear-usuario.ts
+Ir a usuarios.html -> routerLink como property bindig porque le voy a pasar datos (id) o con evento click| index para eliminar por indice de array o id.
+Ir a dashboard-routing -> crear ruta
+Ir a usuario.service crear metodo getUsuario()
+Ir a crear-usuario.ts -> creo variable id, inyecto private activatedRoute: ActivatedRoute y creo metodo editUsuario()
+Ir a usuario.service
